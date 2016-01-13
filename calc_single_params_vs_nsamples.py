@@ -14,13 +14,13 @@ import os, sys
 
 ##################################
 ##configure:
-PARAMETER_FILE = '/home/rusty/Documents/phd files/write_along/second_year/functional_response_paper/final_code_version/linearFR/test/src/parameter_log.txt'
+PARAMETER_FILE = './parameter_log.txt' #'/home/rusty/Documents/phd files/write_along/second_year/functional_response_paper/final_code_version/linearFR/test/src/parameter_log.txt'
 
 REPEATS_PER_PARAMETER_SET = 1000
 DT = 0.0001
 noise = 50
 
-p = 0  ## pID
+p = 87  ## pID
 printout = False
 plot_dynamics = False
 ##################################
@@ -34,7 +34,7 @@ parameters = np.genfromtxt(PARAMETER_FILE, delimiter=',')
 #samples = np.logspace(2,15,num=14,base=2)
 #samples = samples.astype(int)  
 #samples = [10, 20, 50, 100, 1000, 10000, 50000]
-samples = range(3,100)
+samples = range(4,100)
 samples.append(200)
 samples.append(300)
 samples.append(400)
@@ -97,7 +97,7 @@ for si in samples:
     sid += 1
 
 #np.savetxt('test_single_params_sample_size_3.txt', RESULTS, delimiter=',')
-np.savetxt('single_params_vs_nsamples_pID_%d_noise_%f_dt_%f_reps_%d.txt' %(p,noise, DT, REPEATS_PER_PARAMETER_SET), RESULTS, delimiter=',')
+np.savetxt('single_params_vs_nsamples_pID_%d_noise_%f_dt_%f_reps_%d.results' %(p,noise, DT, REPEATS_PER_PARAMETER_SET), RESULTS, delimiter=',')
     
 stop_sim = datetime.now()
 elapsed_sim = stop_sim-start_sim

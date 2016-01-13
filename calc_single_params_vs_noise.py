@@ -12,13 +12,13 @@ import os, sys
 
 ##################################
 ##configure:
-PARAMETER_FILE = '/home/rusty/Documents/phd files/write_along/second_year/functional_response_paper/final_code_version/linearFR/test/src/parameter_log.txt'
+PARAMETER_FILE = './parameter_log.txt' #'/home/rusty/Documents/phd files/write_along/second_year/functional_response_paper/final_code_version/linearFR/test/src/parameter_log.txt'
 
 REPEATS_PER_PARAMETER_SET = 1000
 DT = 0.0001
-NUMBER_OF_SAMPLES = 10000
+NUMBER_OF_SAMPLES = 1000 #10000
 
-p = 0  ## pID
+p = 87  ## pID
 printout = False
 plot_dynamics = False
 ##################################
@@ -26,7 +26,7 @@ plot_dynamics = False
 start_sim = datetime.now()
 parameters = np.genfromtxt(PARAMETER_FILE, delimiter=',')
 
-noise = range(10)
+noise = range(100) 
 
 RESULTS = np.zeros((len(noise), 1 + (6 + 2)*2))  ## as below. *2 for mean and variance over repeats.
 RESULTS[:,0] = noise
@@ -78,7 +78,7 @@ for ni in noise:
     RESULTS[nid,1:] = np.append(np.mean(summary_array,0), np.var(summary_array,0))
     nid += 1
 
-np.savetxt('single_params_vs_noise_pID_%d_nsamples_%d_dt_%f_reps_%d.txt' %(p,NUMBER_OF_SAMPLES, DT, REPEATS_PER_PARAMETER_SET), RESULTS, delimiter=',')
+np.savetxt('single_params_vs_noise_pID_%d_nsamples_%d_dt_%f_reps_%d.results' %(p,NUMBER_OF_SAMPLES, DT, REPEATS_PER_PARAMETER_SET), RESULTS, delimiter=',')
     
 stop_sim = datetime.now()
 elapsed_sim = stop_sim-start_sim
