@@ -3,7 +3,7 @@
 # it also implements all the check son the dyanmics that we require for parameter selection
 
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import math as math
 import random as rnd
 
@@ -69,13 +69,13 @@ class linear_simulator_parameter_tester():
             t += 1
         
         #print self.theta/np.pi
-        if self.plot:
-            plt.subplot(1,2,1)    
-            plt.plot(self.dynamics[1,0:t],'g')
-            plt.plot(self.dynamics[2,0:t],'r')
-            plt.subplot(1,2,2)
-            plt.plot(self.dynamics[1,0:t], self.dynamics[2,0:t])    
-            plt.show()
+        #if self.plot:
+        #    plt.subplot(1,2,1)    
+         #   plt.plot(self.dynamics[1,0:t],'g')
+          #  plt.plot(self.dynamics[2,0:t],'r')
+           # plt.subplot(1,2,2)
+           # plt.plot(self.dynamics[1,0:t], self.dynamics[2,0:t])    
+           # plt.show()
      
     def get_dynamics(self):
         return self.dynamics[:,0:self.t]
@@ -171,13 +171,13 @@ class linear_simulator():
         
         self.t = i-1   # to be used for trimming overallocated dynamics array
         
-        if self.plot:
-            plt.subplot(1,2,1)    
-            plt.plot(self.dynamics[0,0:i], self.dynamics[1,0:i],'g')
-            plt.plot(self.dynamics[0,0:i], self.dynamics[2,0:i],'r')
-            plt.subplot(1,2,2)
-            plt.plot(self.dynamics[1,0:i], self.dynamics[2,0:i])    
-            plt.show()
+        #if self.plot:
+        #    plt.subplot(1,2,1)    
+        #    plt.plot(self.dynamics[0,0:i], self.dynamics[1,0:i],'g')
+        #    plt.plot(self.dynamics[0,0:i], self.dynamics[2,0:i],'r')
+        #    plt.subplot(1,2,2)
+        #    plt.plot(self.dynamics[1,0:i], self.dynamics[2,0:i])    
+        #    plt.show()
     
     def noise(self,X):
         return rnd.gauss(0, self.dt*self.noise_intensity*X)

@@ -6,7 +6,7 @@
 ## i.e. extinction at t=2 => discard interpolate data point at i=1
 
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 class sampler():
     
@@ -39,14 +39,14 @@ class sampler():
         
         #if self.plot==True:
         #    
-        if False:  #True:
-	    plt.subplot(1,2,1)
-            plt.plot(self.dynamics[0,:], self.dynamics[1,:], 'g')
-            plt.plot(self.dynamics[0,:], self.dynamics[2,:], 'r')
-            plt.subplot(1,2,2)
-            plt.plot(self.sampled_dynamics[0,:], self.sampled_dynamics[1,:], 'go-')
-            plt.plot(self.sampled_dynamics[0,:], self.sampled_dynamics[2,:], 'ro-')
-            plt.show()
+        #if False:  #True:
+	#    plt.subplot(1,2,1)
+        #    plt.plot(self.dynamics[0,:], self.dynamics[1,:], 'g')
+        #    plt.plot(self.dynamics[0,:], self.dynamics[2,:], 'r')
+        #    plt.subplot(1,2,2)
+        #    plt.plot(self.sampled_dynamics[0,:], self.sampled_dynamics[1,:], 'go-')
+        #    plt.plot(self.sampled_dynamics[0,:], self.sampled_dynamics[2,:], 'ro-')
+        #    plt.show()
             
 if __name__=='__main__':
     

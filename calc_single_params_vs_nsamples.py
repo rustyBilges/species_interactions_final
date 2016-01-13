@@ -16,7 +16,7 @@ import os, sys
 ##configure:
 PARAMETER_FILE = '/home/rusty/Documents/phd files/write_along/second_year/functional_response_paper/final_code_version/linearFR/test/src/parameter_log.txt'
 
-REPEATS_PER_PARAMETER_SET = 2
+REPEATS_PER_PARAMETER_SET = 1000
 DT = 0.0001
 noise = 50
 
