@@ -1,0 +1,97 @@
+
+test run: 3915172
+
+Following are runs of calc_single_params_vs_noise.py 
+
+> All with 1000 repeats
+> dt = 0.0001
+> noise = range(100)
+
+3914310 - nsamples = 10,000
+	- pID = 0
+
+3914366 - nsamples = 100
+	- pID = 0
+
+3914384 - nsamples = 500
+	- pID = 0
+
+3914395 - nsamples = 1000
+	- pID = 0
+
+3914406 - nsamples = 1000
+	- pID = 87
+
+
+*******************************************************
+Following are runs of calc_single_params_vs_nsamples.py 
+
+> All with 1000 repeats
+> dt = 0.0001
+> samples = [range(3,100),range(200,1100,11), 10,000]
+
+(crash)3914493 - noise = 50
+	- pID = 0
+
+3(crash)914494 - noise = 10
+	- pID = 0
+
+3(crash)914495 - noise = 20
+	- pID = 0
+
+(crash)3914496 - noise = 20
+	- pID = 87
+
+(crash)3914497 - noise = 10
+	- pID = 87
+
+(crash)3914498 - noise = 50
+	- pID = 87
+
+**crashing due to singular matrix on sample size 3. Try starting at 4..
+
+3914504 - noise = 50
+	- pID = 0
+	-samples = [range(4,100),range(200,1100,11), 10,000]
+
+3914506 - noise = 50
+	- pID = 87
+	-samples = [range(4,100),range(200,1100,11), 10,000]
+
+3915013 - noise = 20
+	- pID = 87
+	-samples = [range(4,100),range(200,1100,11), 10,000]
+
+3915014 - noise = 10
+	- pID = 87
+	-samples = [range(4,100),range(200,1100,11), 10,000]
+
+3915015 - noise = 10
+	- pID = 0
+	-samples = [range(4,100),range(200,1100,11), 10,000]
+
+3915016 - noise = 20
+	- pID = 0
+	-samples = [range(4,100),range(200,1100,11), 10,000]
+
+*******************************************************
+Following are runs of calc_ensemble_params_vs_noise.py 
+
+> All with 10 repeats x 100 parameter sets
+> dt = 0.0001
+> noise = range(100)
+
+3915017 - samples = 1000 
+3915018 - samples = 10000 
+
+*******************************************************
+Following are runs of calc_ensemble_params_vs_nsamples.py 
+
+> All with 10 repeats x 100 parameter sets
+> dt = 0.0001
+> samples = [range(3,100),range(200,1100,11), 10,000]
+
+3915019 - noise=50 
+3915020 - noise=20 
+3915021 - noise=10 
+

@@ -18,9 +18,9 @@ PARAMETER_FILE = './parameter_log.txt' #'/home/rusty/Documents/phd files/write_a
 
 REPEATS_PER_PARAMETER_SET = 1000
 DT = 0.0001
-noise = 50
+noise = 20
 
-p = 87  ## pID
+p = 0  ## pID
 printout = False
 plot_dynamics = False
 ##################################

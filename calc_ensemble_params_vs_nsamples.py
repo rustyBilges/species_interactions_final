@@ -16,11 +16,11 @@ import os, sys
 ##configure:
 PARAMETER_FILE = './parameter_log.txt'
 
-REPEATS_PER_PARAMETER_SET = 1000
+REPEATS_PER_PARAMETER_SET = 10
 DT = 0.0001
-noise = 50
+noise = 10
 
-params = range(2)
+params = range(100)
 printout = False
 plot_dynamics = False
 ##################################

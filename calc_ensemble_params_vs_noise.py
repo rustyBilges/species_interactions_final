@@ -15,11 +15,11 @@ import os, sys
 ##configure:
 PARAMETER_FILE = './parameter_log.txt' 
 
-REPEATS_PER_PARAMETER_SET = 2 #1000
+REPEATS_PER_PARAMETER_SET = 10
 DT = 0.0001
-NUMBER_OF_SAMPLES = 1000 #10000
+NUMBER_OF_SAMPLES = 10000
 
-params = range(2)   # CHANGE
+params = range(100) 
 printout = False
 plot_dynamics = False
 ##################################
@@ -27,7 +27,7 @@ plot_dynamics = False
 start_sim = datetime.now()
 parameters = np.genfromtxt(PARAMETER_FILE, delimiter=',')
 
-noise = range(10)  # CHANGE
+noise = range(100) 
 
 RESULTS = np.zeros((len(noise), 1 + (6 + 2)*2))  ## as below. *2 for mean and variance over repeats.
 RESULTS[:,0] = noise
